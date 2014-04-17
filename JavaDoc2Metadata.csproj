@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Commandlineparameters>-j /Users/zgramana/Source/dropbox-sync-component/source/binding/Android/javadoc/com/dropbox/sync/android -p com.dropbox.sync.android</Commandlineparameters>
+    <Commandlineparameters>-j /Users/zgramana/Xamarin/Projects/Wikitude/Wikitude.Android/Docs/html/com/wikitude/architect -p com.wikitude.architect</Commandlineparameters>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">

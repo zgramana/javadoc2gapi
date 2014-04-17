@@ -77,11 +77,19 @@ namespace JavaDoc2Metadata
             var ctorTable = doc.DocumentNode.SelectNodes("//table[preceding-sibling::a[@name=\"constructor_summary\"]]/tr[position()>1]/td[@class=\"colOne\"]/code");
             if (ctorTable != null) {
                 ParseTable (documentPath, ctorTable);
+            } else {
+                ctorTable = doc.DocumentNode.SelectNodes("//table[descendant::text()[. = \"Constructor Summary\"]]/tr[position()>1]/td/code");
+                if (ctorTable != null)
+                    ParseTable (documentPath, ctorTable);
             }
             // Process methods.
             var methodTable = doc.DocumentNode.SelectNodes("//table[preceding-sibling::a[@name=\"method_summary\"]]/tr[position()>1]/td[@class=\"colLast\"]/code");
             if (methodTable != null) {
-                ParseTable (documentPath, methodTable);
+                    ParseTable (documentPath, methodTable);
+            } else {
+                methodTable = doc.DocumentNode.SelectNodes("//table[preceding-sibling::a[@name=\"method_summary\"]]/tr[position()>1]/td[position()>1]/code");
+                if (methodTable != null)
+                    ParseTable (documentPath, methodTable);
             }
         }
 
